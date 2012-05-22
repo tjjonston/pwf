@@ -5,7 +5,7 @@ import java.awt.Graphics;
 
 public class Ball {
 
-	public static final int  BALL_WIDTH = 16;
+	public static final int  BALL_WIDTH = 24;
 
 	public Ball(int x, int y){
 		this.x = x;

@@ -32,14 +32,25 @@ public class PoolPanel extends JPanel implements KeyListener{
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("hit");
-		table.hit();
+		if(e.getKeyCode() == KeyEvent.VK_SPACE)
+			table.hit();
+		if(e.getKeyCode() == KeyEvent.VK_LEFT)
+			table.turn(Table.LEFT_TURN);
+		if(e.getKeyCode() == KeyEvent.VK_RIGHT)
+				table.turn(Table.RIGHT_TURN);
+		if(e.getKeyCode() == KeyEvent.VK_UP)
+			table.power(1);
+		if(e.getKeyCode() == KeyEvent.VK_DOWN)
+				table.power(-1);
+		if(e.getKeyCode() == KeyEvent.VK_CONTROL)
+			table.check(true);
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
+		if(e.getKeyCode() == KeyEvent.VK_CONTROL)
+			table.check(false);
 	}
 
 	@Override
